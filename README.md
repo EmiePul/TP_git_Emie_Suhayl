@@ -3,4 +3,23 @@
 HELLO
 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
 
+import subprocess
+
+def ajouter_tache(tache, description):
+    # Dictionnaire de tâches
+    taches = {}
+    
+    # Charger les tâches depuis un fichier JSON ou une autre source si nécessaire
+    # Ici, nous utilisons un dictionnaire vide
+    
+    # Ajouter la nouvelle tâche au dictionnaire
+    taches[tache] = description
+    
+    # Effectuer un commit avec Git
+    subprocess.run(['git', 'add', 'taches.json'])  # Remplacer 'taches.json' par le nom de votre fichier contenant les tâches
+    subprocess.run(['git', 'commit', '-m', 'Ajout d\'une nouvelle tâche'])
+    subprocess.run(['git', 'push', 'origin', 'manageTask'])
+
+# Exemple d'utilisation de la fonction
+ajouter_tache("Faire les courses", "Acheter du lait, des œufs et du pain")
 
