@@ -30,4 +30,27 @@ linux@Linux:~/Documents/TP_git_Em
 
 D'apres linux les commits ont bien ete fait mais je n'arrive pas a sauvegarder ce commits sur le main a cause d'une erreur d'authentication dont je ne trouve pas la solution
 
+def main():
+    print("Que souhaitez-vous faire ?")
+    print("1. Charger une liste de tâches")
+    print("2. Créer une liste de tâches")
 
+    choice = input("Entrez votre choix (1 ou 2) : ")
+
+    if choice == "1":
+        load_tasks()
+    elif choice == "2":
+        create_tasks()
+    else:
+        print("Choix invalide. Veuillez entrer 1 ou 2.")
+
+def load_tasks():
+    print("Chargement de la liste de tâches...")
+    # Ajouter le code pour charger une liste de tâches
+
+def create_tasks():
+    print("Création d'une nouvelle liste de tâches...")
+    # Ajouter le code pour créer une liste de tâches
+
+if __name__ == "__main__":
+    main()
